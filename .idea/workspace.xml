@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0b567746-32d2-43c1-ac36-66a93c077da6" name="更改" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2ZRKroiCuHiTEyq0fYGTSrIby8b" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Flask 服务器.Flask (app.py).executor": "Run",
+    "JavaScript 调试.login.html.executor": "Run",
+    "JavaScript 调试.register_manager.html.executor": "Run",
+    "Python.123456.executor": "Run",
+    "Python.app.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "shangji1",
+    "last_opened_file_path": "D:/文件/2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws",
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="login.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mis2023_1/templates/login.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="register_manager.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mis2023_1/templates/register_manager.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="MIS2023" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
+      <module name="MIS2023" />
+      <option name="target" value="$PROJECT_DIR$/app.py" />
+      <option name="targetType" value="PATH" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flask 服务器.Flask (app.py)" />
+        <item itemvalue="JavaScript 调试.register_manager.html" />
+        <item itemvalue="JavaScript 调试.login.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="0b567746-32d2-43c1-ac36-66a93c077da6" name="更改" comment="" />
+      <created>1702379652932</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702379652932</updated>
+      <workItem from="1702379653943" duration="757000" />
+      <workItem from="1702380647170" duration="206000" />
+      <workItem from="1702380915390" duration="42000" />
+      <workItem from="1702381947815" duration="410000" />
+      <workItem from="1702382414667" duration="21000" />
+      <workItem from="1702897849670" duration="1948000" />
+      <workItem from="1703216165519" duration="239000" />
+      <workItem from="1703238376154" duration="182000" />
+      <workItem from="1703562095542" duration="1145000" />
+      <workItem from="1704014876243" duration="86000" />
+      <workItem from="1704014975153" duration="42000" />
+      <workItem from="1704809419589" duration="2115000" />
+      <workItem from="1704864273970" duration="5225000" />
+      <workItem from="1704943033212" duration="1186000" />
+      <workItem from="1705234060347" duration="875000" />
+      <workItem from="1705246146421" duration="661000" />
+      <workItem from="1705248763728" duration="624000" />
+      <workItem from="1705283332834" duration="1011000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mis2023_1$123456.coverage" NAME="123456 覆盖结果" MODIFIED="1702899130159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mis2023_1$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1703563196015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/123456_py$Flask__app_py_.coverage" NAME="Flask (app.py) 覆盖结果" MODIFIED="1705283423622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/mis2023_1$app.coverage" NAME="app 覆盖结果" MODIFIED="1702897882872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/123456_py$app.coverage" NAME="app 覆盖结果" MODIFIED="1704809525829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
