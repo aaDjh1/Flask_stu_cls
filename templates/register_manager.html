@@ -1,0 +1,109 @@
+<style>
+.login-form {
+    position: relative;
+    max-width: 300px;
+    margin: 0 10px;
+    padding: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 50px;
+    float: right;
+    width: 300px;
+    top: 46px;
+    background-color: rgba(255,255,255,0.5);
+}
+.alert {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #4285f4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #4285f4;
+    color: #fff;
+    border: 1px solid #4285f4;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+.btn:hover {
+    background-color: #2d66f7;
+}
+img {
+    width: 1100px;
+    position: absolute;
+}
+.box {
+    position: absolute;
+    top: 90px;
+    width: 1100px;
+}
+</style>
+{% extends "zhuce_base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+{% block title %}管理员注册{% endblock %}
+{% block page_content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <div class="box">
+            <div>
+
+                <form action="/register_manager" method="POST" name="form" class="login-form shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="input-group">
+                        <label for="user">用户名:</label><input type="text" id="user" required name="user" class="form-control" placeholder="请输入用户名">
+                    </div>
+                    <div class="input-group">
+                        <label for="ID">管理员号:</label><input type="text" id="ID" required name="id" class="form-control" placeholder="请输入8位字符">
+                    </div>
+                    <div class="input-group">
+                        <label for="psw">密码:</label><input type="password" id="psw" required name="psw" class="form-control" placeholder="请输入6——10位字符">
+                    </div>
+                    <div class="input-group">
+                        <label for="psw_confirm">确认密码:</label><input type="password" id="psw" required name="psw_confirm" class="form-control" placeholder="请保证两次密码一致">
+                    </div>
+                    <button type="submit" class="btn btn-primary">立即注册</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

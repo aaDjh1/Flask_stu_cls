@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+<style>
+        .box {
+            position: absolute;
+            top: 50%;
+            width: 300px;
+            left: 900px;
+        }
+        .img {
+            position: absolute;
+            top: 170px;
+            width: 700px;
+            left: 150px;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #dddddd ;
+            height: 80px;
+            left: 0;
+        }
+        .span_box {
+            padding: 0 0 0 200px;
+        }
+    </style>
+
+{% extends "login_base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+{% block title %}管理员登录{% endblock %}
+{% block page_content %}
+<div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% endfor %}
+    <div class="img">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+              <div class="carousel-inner">
+                  <div class="carousel-item active">
+                      <img src="../static/图片2.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="../static/图片4.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                      <img src="../static/图片6.png" class="d-block w-100" alt="...">
+                  </div>
+                  </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                      </button>
+                  </div>
+        </div>
+    </div>
+    <div class="box">
+        <form action="/admin" method="POST" name="form" class="position-absolute top-50 end-0 translate-middle-y shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+            <div class="input-group">
+                <label for="id" class="form-label">管理员账号:</label><input type="text" id="id" required name="id" class="form-control" placeholder="请输入8位字符">
+            </div>
+            <div class="input-group">
+                <label for="psw" class="form-label">密码:</label><input type="password" id="psw" required name="psw" class="form-control" placeholder="请输入6——10位字符">
+            </div>
+            <button type="submit" class="btn btn-dark">立即登录<i class="bi bi-person"></i></button>
+        </form>
+    </div>
+    <div class="bottom">
+        <div class="span_box"><p style="font-family: 新宋体">东北大学 版权所有 Copyright@2019 Northeastern University All Rights Reserved.</p></div>
+        <div class="span_box"><p style="font-family: 新宋体">学校地址：辽宁省沈阳市和平区文化路三巷11号 邮编：110819</p></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        const carousel = new bootstrap.Carousel('#myCarousel')
+    </script>
+{% endblock %}

@@ -1,0 +1,131 @@
+<style>
+    .page-header {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.stud-item {
+    margin-bottom: 15px;
+}
+
+table {
+            border: 1px solid pink;
+        }
+
+        h4 {
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        th:hover {
+            background-color: #dddddd;
+        }
+        tr:hover {
+            background-color: #dddddd;
+        }
+</style>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}学生、课程信息管理系统{% endblock %}
+{% block page_content %}
+<div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="page-header">
+    <h1>课程记录</h1>
+
+
+</div>
+    <div>
+
+
+    <table>
+    <tr>
+        <th><h4>课程号</h4></th>
+        <th><h4>课程名称</h4></th>
+        <th><h4>开课教师</h4></th>
+        <th><h4>开课专业</h4></th>
+        <th><h4>学分</h4></th>
+        <th><h4>{{ lessons|length }}门课程</h4></th>
+        <th><a href="{{ url_for('new_lesson') }}" class="btn">新增课程</a></th>
+    </tr>
+{% for lesson in lessons %}
+    <tr>
+
+            <td>{{ lesson.id }}</td>
+            <td>{{ lesson.name }}</td>
+            <td>{{ lesson.teacher }}</td>
+            <td>{{ lesson.major }}</td>
+            <td>{{ lesson.grade }}</td>
+            <td><a type="btn" href="{{ url_for('edit_lesson',lesson_id=lesson.id) }}" class="btn">编辑课程</a></td>
+            <td><a type="btn" href="{{ url_for('delete_lesson',lesson_id = lesson.id) }}" class="btn">删除课程</a></td>
+    </tr>
+{% endfor %}
+    </table>
+
+
+
+
+    </div>
+<div class="page-header">
+    <h1>学生记录</h1>
+</div>
+    <div>
+
+
+    <table>
+    <tr>
+        <th><h4>学号</h4></th>
+        <th><h4>姓名</h4></th>
+        <th><h4>出生日期</h4></th>
+        <th><h4>年龄</h4></th>
+        <th><h4>籍贯</h4></th>
+        <th><h4>性别</h4></th>
+        <th><h4>学院</h4></th>
+        <th><h4>专业</h4></th>
+        <th><h4>{{ studs|length }}位学生</h4></th>
+        <th><a href="{{ url_for('new_stud') }}" class="btn">新增学生</a></th>
+    </tr>
+{% for stud in studs %}
+    <tr>
+
+            <td>{{stud.id }}</td>
+            <td>{{ stud.name }}</td>
+            <td>{{ stud.birthday }}</td>
+            <td>{{ stud.age }}</td>
+            <td>{{ stud.placeofbird }}</td>
+            <td>{{ stud.sex }}</td>
+            <td>{{ stud.college }}</td>
+            <td>{{ stud.major }}</td>
+            <td><a type="btn" href="{{ url_for('edit_stud',stu_id=stud.id) }}" class="btn ">编辑学生</a></td>
+            <td><a type="btn" href="{{ url_for('delete_stud',stu_id = stud.id) }}" class="btn ">删除学生</a></td>
+
+    </tr>
+{% endfor %}
+    </table>
+</div>
+{% endblock %}

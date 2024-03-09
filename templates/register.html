@@ -1,0 +1,78 @@
+
+{% extends "zhuce_base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+{% block title %}学生注册{% endblock %}
+{% block page_content %}
+    <style>
+        .login-form {
+            position: relative;
+            max-width: 300px;
+            left: 100px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 70px;
+            height: 280px;
+        }
+        .box {
+            position: relative;
+            background-color: rgba(244, 246, 250, 0.6);
+            width: 1200px;
+            top: 70px;
+            margin: 0 auto;
+            height: 500px;
+        }
+        .box_img {
+            position: absolute;
+            top: 100px;
+            right: 40px;
+        }
+        .big_box {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: 65px;
+            background-color: rgba(244,246,250,0.2);
+        }
+        .float_box {
+            float: right;
+            background-color:rgba(28,59,103) ;
+            height: 100%;
+            width: 700px;
+        }
+        p {
+            position: absolute;
+
+        }
+    </style>
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="big_box">
+            <div class="float_box"></div>
+            <div class="box shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <form action="/register" method="POST" name="form" class="login-form shadow p-3 mb-5 bg-body-tertiary rounded">
+                    <div class="mb-3">
+                        <label for="ID" class="form-label">学号:</label><input type="text" id="ID" required name="id" class="form-control" placeholder="请输入8位字符">
+                    </div>
+                    <div class="mb-3">
+                        <label for="psw" class="form-label">密码:</label><input type="password" id="psw" required name="psw" class="form-control" placeholder="请输入6——10位字符">
+                    </div>
+                    <div class="mb-3">
+                        <label for="psw_confirm" class="form-label">确认密码:</label><input type="password" id="psw" required name="psw_confirm" class="form-control" placeholder="请保证两次密码一致">
+                    </div>
+                    <div class="position-relative">
+                        <button type="submit" class="btn btn-outline-success ">立即注册</button>
+                    </div>
+                </form>
+                <div class="box_img "><img src="../static/图片6.png" style="width: 500px"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    .page-header {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+            border: 1px solid pink;
+        }
+
+        h4 {
+            color: #333;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: black;
+            color: #fff;
+        }
+
+        th:hover {
+            background-color: #dddddd;
+        }
+        tr:hover {
+            background-color: #dddddd;
+        }
+</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+</body>
+</html>
+
+{% extends "studentinfo_base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}学生信息{% endblock %}
+{% block page_content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            {{ message }}<button type="button" class="close" data-dismiss="alert">&times;</button>
+
+        </div>
+        {% endfor %}
+    </div>
+    <div>
+    <table>
+    <tr>
+        <th><h4>学号</h4></th>
+        <th><h4>姓名</h4></th>
+        <th><h4>出生日期</h4></th>
+        <th><h4>年龄</h4></th>
+        <th><h4>籍贯</h4></th>
+        <th><h4>性别</h4></th>
+        <th><h4>学院</h4></th>
+        <th><h4>专业</h4></th>
+        <th><h4>{{ studs|length }}位学生</h4></th>
+        <th><a href="{{ url_for('new_stud') }}" class="btn btn-dark">新增学生</a></th>
+    </tr>
+{% for stud in studs %}
+    <tr>
+
+            <td>{{stud.id }}</td>
+            <td>{{ stud.name }}</td>
+            <td>{{ stud.birthday }}</td>
+            <td>{{ stud.age }}</td>
+            <td>{{ stud.placeofbird }}</td>
+            <td>{{ stud.sex }}</td>
+            <td>{{ stud.college }}</td>
+            <td>{{ stud.major }}</td>
+            <td><a type="btn" href="{{ url_for('edit_stud',stu_id=stud.id) }}" class="btn btn-danger ">编辑学生</a></td>
+            <td><a type="btn" href="{{ url_for('delete_stud',stu_id = stud.id) }}" class="btn btn-outline-danger ">删除学生</a></td>
+
+    </tr>
+{% endfor %}
+    </table>
+</div>
+{% endblock %}

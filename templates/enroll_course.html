@@ -1,0 +1,51 @@
+{% extends 'user_base.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+      {% for message in get_flashed_messages() %}
+          <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+      {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+<div class="container mt-4">
+  <h3 class="mb-3">选课系统</h3>
+  <form method="POST" class="mb-4">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+      {{ form.course_id.label(class="form-control-label") }}
+      {{ form.course_id(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class="btn btn-primary") }}
+    </div>
+  </form>
+{% if selected_courses %}
+  <h3 class="mb-3">已选课程</h3>
+
+  <ul class="list-group">
+    {% for enrollment in selected_courses %}
+    <li class="list-group-item">
+      {{ enrollment.lesson.name }} - {{ enrollment.lesson.grade }} 学分
+      <a href="{{ url_for('delete_enrollment', id=enrollment.id) }}" class="btn btn-danger btn-sm float-right">退课</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2 class="mt-3">总学分: {{ total_credits }}</h2>
+{% endif %}
+  <h2 class="mt-4">可选课程</h2>
+  <ul class="list-group">
+    {% for course in available_courses %}
+    <li class="list-group-item">
+      课程号 {{ course.id }} - {{ course.major }} - {{ course.name }} - {{ course.teacher }} - {{ course.grade }} 学分
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}
